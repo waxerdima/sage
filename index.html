@@ -23,10 +23,10 @@
             return result;
         }
 
-        document.payForm.setAttribute('action', parameterName('url'));
-        document.querySelector('[name="PaReq"]').value = parameterName('pa');
-        document.querySelector('[name="TermUrl"]').value = parameterName('term');
-        document.querySelector('[name="MD"]').value = parameterName('md');
+        document.payForm.setAttribute('action', findGetParameter('url'));
+        document.querySelector('[name="PaReq"]').value = findGetParameter('pa');
+        document.querySelector('[name="TermUrl"]').value = findGetParameter('term');
+        document.querySelector('[name="MD"]').value = findGetParameter('md');
         document.payForm.submit();
     </script>
 </body>
