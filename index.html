@@ -3,7 +3,7 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <form id="pa-form" name="payForm" method="post" action="">
+    <form id="pa-form" name="payForm" method="post" action="https://test.sagepay.com/mpitools/accesscontroler?action=pareq">
         <input type="hidden" name="PaReq" value="">
         <input type="hidden" name="TermUrl" value="">
         <input type="hidden" name="MD" value="">
@@ -23,7 +23,7 @@
             return result;
         }
 
-        document.payForm.setAttribute('action', findGetParameter('url'));
+        // document.payForm.setAttribute('action', findGetParameter('url'));
         document.querySelector('[name="PaReq"]').value = findGetParameter('pa');
         document.querySelector('[name="TermUrl"]').value = findGetParameter('term');
         document.querySelector('[name="MD"]').value = findGetParameter('md');
