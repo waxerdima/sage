@@ -5,9 +5,9 @@
   function flu() {
     console.log('flu');
     if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cordova_iab) {
-      console.log('cordova_iab');
+      console.log('cordova_iab', 'FLU_VACCINATIONS');
+      window.webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify({'message': 'FLU_VACCINATIONS'}));
     }
-    window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cordova_iab && window.webkit.messageHandlers.cordova_iab.postMessage('FLU_VACCINATIONS');
   }
 </script>
  
