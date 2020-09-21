@@ -1,0 +1,15 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<script>
+  function flu() {
+    console.log('flu');
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cordova_iab) {
+      console.log('cordova_iab');
+    }
+    window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cordova_iab && window.webkit.messageHandlers.cordova_iab.postMessage('FLU_VACCINATIONS');
+  }
+</script>
+<button type="button" onClick="flu()">Test</button>
+</body>
+</html> 
