@@ -6,13 +6,13 @@
 </head>
 <body>
 <div class="sage-pay status success">
-Payment Successful!2
+Payment Successful!3
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('load', function(event) {
     window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.cordova_iab && window.webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify({'message': "SAGE_PAY_SUCCESS", 'status': ""}));
-    console.log(111, window.webkit);
-  }, false);
+    console.log(222, window.webkit);
+});
 </script>
 
 </body></html>
